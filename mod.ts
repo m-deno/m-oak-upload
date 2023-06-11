@@ -90,32 +90,31 @@ function filterFileMaxNumber(maxFileNumber: number|undefined, fileList: FormData
 /**
  * 文件上传中间件
  * 
- * @example
- * Example1 默认配置
+ * @example 默认配置
  * ```ts
  * import { upload } from 'https://deno.land/x/m_oak_upload';
  *
  * router.post('/upload', upload("uploads") , UploadController.upload)
  * ```
- * Example2 文件大小限制，随机名称
+ * @example 文件大小限制，随机名称
  * ```ts
  * import { upload } from 'https://deno.land/x/m_oak_upload';
  * 
  * router.post('/upload', upload("uploads", { maxFileSize: 2*1024*1024, randomName: true }) , UploadController.upload)
  * ```
- * Example3 文件名称过滤
+ * @example 文件名称过滤
  * ```ts
  * import { upload } from 'https://deno.land/x/m_oak_upload';
  *
  * router.post('/upload', upload("uploads", { files: ['file', 'file2'], maxFile: 2  }) , UploadController.upload)
  * ```
- * Example4 文件后缀过滤
+ * @example 文件后缀过滤
  * ```ts
  * import { upload } from 'https://deno.land/x/m_oak_upload';
  *
  * router.post('/upload', upload("uploads", { exts: ['ts', 'png', 'jpg'] }) , UploadController.upload)
  * ```
- * Example5 文件数量限制
+ * @example 文件数量限制
  * ```ts
  * import { upload } from 'https://deno.land/x/m_oak_upload';
  *
